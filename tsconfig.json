@@ -1,0 +1,113 @@
+/*
+    Visit https://aka.ms/tsconfig to read more about this file
+    Посетите https://aka.ms/tsconfig, чтобы узнать больше об этом файле
+*/
+{
+    "compilerOptions": {
+
+        // Use modern ECMAScript target for Node 20+ / 22+ runtimes.
+        // Использовать современную целевую версию JS для Node 20+/22+.
+        "target": "ES2022",
+
+        // Emit native ES modules (keep ESM semantics).
+        // Генерировать нативные ES-модули (сохранять семантику ESM).
+        "module": "NodeNext",
+
+        // Resolve modules the same way Node resolves ESM.
+        // Разрешать модули так же, как это делает Node для ESM.
+        "moduleResolution": "NodeNext",
+
+        // Treat all files as modules regardless of top-level imports/exports.
+        // Считать все файлы модулями независимо от наличия import/export.
+        "moduleDetection": "force",
+
+        // Preserve import/export syntax exactly;
+        //     require explicit `import type` for types.
+        // Сохранять синтаксис import/export без преобразований;
+        //     требовать явный `import type`.
+        "verbatimModuleSyntax": true,
+
+        // Enable JSON imports as modules.
+        // Разрешить импорт JSON-файлов как модулей.
+        "resolveJsonModule": true,
+
+        // Emit type declarations alongside JS.
+        // Генерировать декларации типов вместе с JS.
+        "declaration": true,
+
+        // Emit source maps for better debugging.
+        // Генерировать sourcemap-файлы для отладки.
+        "sourceMap": true,
+
+        // Emit declaration maps for IDE navigation
+        //     (optional but handy for libs).
+        // Генерировать карты деклараций для удобной навигации в IDE
+        //     (опционально, полезно для библиотек).
+        "declarationMap": true,
+
+        // Output directory for build artifacts.
+        // Каталог для выходных артефактов сборки.
+        "outDir": "dist",
+
+        // Use LF newlines across platforms.
+        // Использовать перевод строки LF на всех платформах.
+        "newLine": "lf",
+
+        // Skip checking .d.ts from libraries to speed up builds.
+        // Пропускать проверку .d.ts библиотек для ускорения сборки.
+        "skipLibCheck": true,
+
+        // Ensure each file can be transpiled in isolation
+        //     (useful for bundlers/TS transformers).
+        // Гарантировать возможность изолированной транспиляции каждого файла
+        //     (полезно для бандлеров/трансформеров).
+        "isolatedModules": true,
+
+        // Enforce strict type-checking across the project.
+        // Включить строгую проверку типов по всему проекту.
+        "strict": true,
+
+        // Add `undefined` to indexed access types
+        //     (makes indexing safer).
+        // Добавлять `undefined` к типам при доступе по индексу
+        //     (безопаснее индексация).
+        "noUncheckedIndexedAccess": true,
+
+        // Treat optional property types as strictly optional
+        //     (no implicit widening).
+        // Строго трактовать опциональные свойства
+        //     (без неявного расширения типов).
+        "exactOptionalPropertyTypes": true,
+
+        // Require `override` keyword when overriding class members.
+        // Требовать ключевое слово `override` при переопределении членов
+        // классов.
+        "noImplicitOverride": true,
+
+        // Disallow property access for keys not declared in index signatures.
+        // Запретить доступ к свойствам, не объявленным в сигнатурах индекса.
+        "noPropertyAccessFromIndexSignature": true,
+
+        // Ensure import paths' casing matches on disk.
+        // Проверять совпадение регистра путей импортов с файловой системой.
+        "forceConsistentCasingInFileNames": true
+    },
+
+    // Include modern TS/ESM sources (.ts and .mts).
+    // Включать современные исходники TS/ESM (.ts и .mts).
+    "include": [
+        "sources/**/*.ts",
+        "sources/**/*.tsx",
+        "sources/**/*.mts",
+
+        "packages/*/*.ts",
+    ],
+
+    // Exclude tests, build output, and dependencies from compilation.
+    // Исключать тесты, артефакты сборки и зависимости из компиляции.
+    "exclude": [
+        "node_modules",
+        "**/*.test.ts",
+        "**/*.test.mts"
+    ]
+}

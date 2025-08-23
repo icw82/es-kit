@@ -1,0 +1,27 @@
+{
+    "name": "@icw82/es-kit-core",
+    "version": "0.1.0",
+    "author": "icw82",
+    "type": "module",
+    "files": ["dist"],
+    "sideEffects": false,
+    "publishConfig": {
+        "access": "public"
+    },
+
+    "devDependencies": {
+        "@types/node": "^24.3.0"
+    },
+
+    "scripts": {
+        "build": "vite build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+
+    "exports": {
+        "./*": {
+            "types": "./dist/*/index.d.mts",
+            "import": "./dist/*.js"
+        }
+    }
+}

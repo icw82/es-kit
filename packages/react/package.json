@@ -1,0 +1,38 @@
+{
+    "name": "@icw82/es-kit-react",
+    "version": "0.1.0",
+    "author": "icw82",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "publishConfig": {
+        "access": "public"
+    },
+
+    "devDependencies": {
+        "@types/node": "^24.3.0"
+    },
+
+    "scripts": {
+        "build": "vite build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+
+    "exports": {
+        "./*": {
+            "types": "./dist/*/index.d.ts",
+            "import": "./dist/*.js"
+        }
+    },
+    "peerDependencies": {
+        "@icw82/es-kit-core": "^0.1.0",
+        "react": "^18 || ^19"
+    },
+    "peerDependenciesMeta": {
+        "react": {
+            "optional": false
+        }
+    }
+}

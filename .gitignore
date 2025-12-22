@@ -1,5 +1,6 @@
 /build
 /output
+/packages/*/coverage
 /packages/*/dist
 
 node_modules

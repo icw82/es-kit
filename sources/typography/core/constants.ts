@@ -1,0 +1,1 @@
+export enum SIGN_USAGE { PLUS, MINUS, BOTH, NO_ONE }

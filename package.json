@@ -2,7 +2,6 @@
     "name": "@icw82/es-kit",
     "version": "0.1.0",
     "description": "Общий код, утилиты",
-    "private": true,
     "workspaces": [
         "packages/*"
     ],
@@ -14,18 +13,16 @@
     },
     "main": "index.js",
     "scripts": {
-        "build": "concurrently --kill-others npm:build:core npm:build:react",
-        "build:core": "npm -w @icw82/es-kit-core run build",
-        "build:react": "npm -w @icw82/es-kit-react run build",
-        "test": "concurrently --kill-others npm:test:core npm:test:react",
-        "test:core": "npm -w @icw82/es-kit-core run test",
-        "test:react": "pm -w @icw82/es-kit-react run test"
+        "build": "lerna run build",
+        "test": "lerna run test",
+        "publish:all": "lerna publish --no-private"
     },
     "devDependencies": {
         "@icw82/eslint-configs": "^0.2.2",
         "concurrently": "^9.2.1",
         "eslint": "^9.33.0",
         "jsdom": "^27.3.0",
+        "lerna": "^9.0.3",
         "rimraf": "^6.0.1",
         "rollup-plugin-dts": "^6.2.3",
         "typescript": "^5.9.2",

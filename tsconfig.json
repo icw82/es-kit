@@ -96,6 +96,8 @@
     // Include modern TS/ESM sources (.ts and .mts).
     // Включать современные исходники TS/ESM (.ts и .mts).
     "include": [
+        "builder/**/*.mts",
+
         "sources/**/*.ts",
         "sources/**/*.tsx",
         "sources/**/*.mts",

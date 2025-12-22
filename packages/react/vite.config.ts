@@ -8,7 +8,7 @@ import { getEntries } from '../../builder/getEntries.mjs';
 const root = resolve('../../');
 const sourcesDir = resolve(root, 'sources');
 const distDir = 'dist';
-const name = 'core';
+const name = 'react';
 const regexp = new RegExp(
     `packages/${name}/dist/([^/]+?)\.d\.ts$`
 );

@@ -1,6 +1,6 @@
 {
     "name": "@icw82/es-kit-react",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "icw82",
     "type": "module",
     "files": [
@@ -13,13 +13,11 @@
     "devDependencies": {
         "@types/node": "^24.3.0"
     },
-
     "scripts": {
         "build": "vite build",
         "test": "vitest",
         "coverage": "vitest run --coverage"
     },
-
     "exports": {
         "./*": {
             "types": "./dist/*/index.d.ts",

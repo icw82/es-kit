@@ -18,7 +18,7 @@
         "publish:all": "lerna publish --no-private"
     },
     "devDependencies": {
-        "@icw82/eslint-configs": "^0.2.2",
+        "@icw82/eslint-configs": "^0.3.0",
         "concurrently": "^9.2.1",
         "eslint": "^9.33.0",
         "jsdom": "^27.3.0",

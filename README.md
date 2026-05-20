@@ -21,3 +21,5 @@ npm run build
 # Юнит-тесты
 npm run test
 ```
+
+## Публикация

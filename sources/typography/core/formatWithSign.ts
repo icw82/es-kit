@@ -1,7 +1,15 @@
 /* eslint-disable no-nested-ternary */
-export const formatWithSign = (value: number, showPlus = false): string => {
-    // NOTE: Расположен внутри, т. к. без этого юнит-тест работает с локалью US
-    const formatter = Intl.NumberFormat(window.navigator.language);
+import type { FormatWithSignOptions } from './interfaces.js';
+
+
+export const formatWithSign = (
+    value: number,
+    { locale, showPlus = false }: FormatWithSignOptions,
+): string => {
+    // NOTE: Локаль передаётся явно и совпадает с языком интерфейса.
+    //       Настройки браузера не используются: иначе одно и то же
+    //       число у разных пользователей выглядит по-разному.
+    const formatter = new Intl.NumberFormat(locale);
 
     // NOTE: Для представления отрицательных чисел следует применять
     //       знак минуса. В отличие от дефиса и среднего тире его ширина

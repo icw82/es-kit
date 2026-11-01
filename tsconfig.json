@@ -5,9 +5,11 @@
 {
     "compilerOptions": {
 
-        // Use modern ECMAScript target for Node 20+ / 22+ runtimes.
-        // Использовать современную целевую версию JS для Node 20+/22+.
-        "target": "ES2022",
+        // Use modern ECMAScript target for Node 22+ runtimes
+        //     (ES2023: immutable array methods like `.toSorted()`).
+        // Использовать современную целевую версию JS для Node 22+
+        //     (ES2023: иммутабельные методы массивов, например `.toSorted()`).
+        "target": "ES2023",
 
         // Emit native ES modules (keep ESM semantics).
         // Генерировать нативные ES-модули (сохранять семантику ESM).

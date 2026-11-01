@@ -25,7 +25,7 @@
         }
     },
     "peerDependencies": {
-        "@icw82/es-kit-core": "^0.1.0",
+        "@icw82/es-kit-core": "^0.2.0",
         "react": "^18 || ^19"
     },
     "peerDependenciesMeta": {

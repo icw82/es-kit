@@ -23,7 +23,7 @@
     },
     "exports": {
         "./*": {
-            "types": "./dist/*/index.d.mts",
+            "types": "./dist/*.d.ts",
             "import": "./dist/*.js"
         }
     }

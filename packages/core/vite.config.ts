@@ -45,6 +45,7 @@ export default defineConfig({
     },
     plugins: [dts({
         include: [`../../sources/*/${name}/**`],
+        exclude: ['../../sources/**/*.test.ts'],
         // tsconfigPath: '../../tsconfig.json',
         insertTypesEntry: true,
         // rollupTypes: true,

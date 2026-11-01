@@ -13,13 +13,8 @@ export const MS = {
     // Number.MAX_SAFE_INTEGER → 9_007_199_254_740_991
 } as const;
 
-export enum TIME_DIRECTION {
-    PAST = 'past',
-    FUTURE = 'future',
-    BOTH = 'both',
-}
-
-/**
- * Текущая разница между UTC и локальным временем в миллисекундах
- */
-export const CURRENT_OFFSET = new Date().getTimezoneOffset() * MS.MINUTE;
+export const TIME_DIRECTION = {
+    PAST: 'past',
+    FUTURE: 'future',
+    BOTH: 'both',
+} as const;

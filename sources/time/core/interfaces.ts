@@ -1,4 +1,7 @@
-export type TimeLike = string | number | Date;
+import type { TIME_DIRECTION } from './constants.mjs';
+
+export type TimeDirection =
+    (typeof TIME_DIRECTION)[keyof typeof TIME_DIRECTION];
 
 export type WeekDayIndex =
 	0 | // Вс

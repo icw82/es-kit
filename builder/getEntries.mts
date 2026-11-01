@@ -18,7 +18,5 @@ export const getEntries = (
             .filter(([, path]) => existsSync(path))
     );
 
-    console.log('>>> Entries:', result);
-
     return result;
 };

@@ -1,4 +1,5 @@
-import { isNonEmptyString } from '@icw82/es-kit-core/basics';
+import { isNonEmptyString } from
+    '../../basics/core/type-check/isNonEmptyString.js';
 
 
 export const capitalizeFirstLetter = (s: string): string => {
